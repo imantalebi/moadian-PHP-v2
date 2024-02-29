@@ -1,6 +1,6 @@
 <?php
 
-use Iman\MoadianPhpSdk\Moadian;
+use ImanTalebi\MoadianPhpSdk\Moadian;
 
 date_default_timezone_set('Asia/Tehran');
 

@@ -1,5 +1,5 @@
 <?php
-namespace Iman\MoadianPhpSdk\Services;
+namespace ImanTalebi\MoadianPhpSdk\Services;
 
 class Base64UrlEncoderService{
 
