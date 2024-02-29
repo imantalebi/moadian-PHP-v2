@@ -1,5 +1,5 @@
 {
-    "name": "iman/moadian-php-sdk",
+    "name": "imantalebi/moadian-php-sdk",
     "description": "PHP SDK For moadian v2",
     "type": "library",
     "require": {
