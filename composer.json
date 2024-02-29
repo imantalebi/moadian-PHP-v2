@@ -1,5 +1,5 @@
 {
-    "name": "imantalebi/moadian-php-sdk",
+    "name": "imantalebi/moadian-php-sdk-v2",
     "description": "PHP SDK For moadian v2",
     "type": "library",
     "require": {
@@ -15,7 +15,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "ImanTalebi\\MoadianPhpSdk\\": "src/"
+            "ImanTalebi\\MoadianPhpSdkV2\\": "src/"
         }
     },
     "authors": [
