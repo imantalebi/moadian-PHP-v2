@@ -15,7 +15,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "ImanTalebi\\Moadian\\": "src/"
+            "Imantalebi\\Moadian\\": "src/"
         }
     },
     "authors": [

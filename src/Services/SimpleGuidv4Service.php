@@ -1,5 +1,5 @@
 <?php
-namespace ImanTalebi\MoadianPhpSdk\Services;
+namespace Imantalebi\MoadianPhpSdk\Services;
 class SimpleGuidv4Service{
 
     public static function generate(){

@@ -1,6 +1,6 @@
 <?php
 
-namespace ImanTalebi\MoadianPhpSdk\Exceptions;
+namespace Imantalebi\MoadianPhpSdk\Exceptions;
 
 class ErrorHandel extends \Exception{
     public function __construct($message, $code = 0, \Throwable $previous = null, $apiReturnedErrors = []) {

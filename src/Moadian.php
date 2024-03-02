@@ -1,13 +1,13 @@
 <?php
 
-namespace ImanTalebi\MoadianPhpSdk;
+namespace Imantalebi\MoadianPhpSdk;
 
 use DateTimeInterface;
-use ImanTalebi\MoadianPhpSdk\Exceptions\ErrorHandel;
-use ImanTalebi\MoadianPhpSdk\Services\JsonService;
-use ImanTalebi\MoadianPhpSdk\Services\JweService;
-use ImanTalebi\MoadianPhpSdk\Services\JwsService;
-use ImanTalebi\MoadianPhpSdk\Services\VerhoeffService;
+use Imantalebi\MoadianPhpSdk\Exceptions\ErrorHandel;
+use Imantalebi\MoadianPhpSdk\Services\JsonService;
+use Imantalebi\MoadianPhpSdk\Services\JweService;
+use Imantalebi\MoadianPhpSdk\Services\JwsService;
+use Imantalebi\MoadianPhpSdk\Services\VerhoeffService;
 use Carbon\Carbon;
 
 class Moadian {
