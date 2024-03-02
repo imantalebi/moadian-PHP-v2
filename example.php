@@ -9,7 +9,7 @@ $cert = file_get_contents('./cert.csr');
 
 $invoiceGregorianDatetTime = date("Y-m-d H:i:s");
 
-$clientId = '######';
+$clientId = '1234567';
 
 try {
     $sandBox = true; //جهت تست در سندباکس سامانه مودیان
@@ -53,9 +53,7 @@ try {
 
     $invoicePackets = [];
 
-    $uid = SimpleGuidv4Service::generate();
-
-    $invoicePackets[] = $moadian->createInvoicePacket($uid, $invoiceHeader, $invoiceBody, $invoicePayment);
+    $invoicePackets[] = $moadian->createInvoicePacket($invoiceHeader, $invoiceBody, $invoicePayment);
 
     $res = $moadian->sendInvoice($invoicePackets);
 
@@ -67,7 +65,7 @@ try {
 
         $todayDate = $datetime->format('Y-m-d');
 
-        var_dump($moadian->inquiryByUId([$uid],
+        var_dump($moadian->inquiryByUId([$moadian->uid],
                         $todayDate . 'T00:00:00.000000000+03:30',
                         $todayDate . 'T23:59:59.123456789+03:30'
         ));

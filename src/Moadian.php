@@ -8,6 +8,7 @@ use Imantalebi\Moadian\Services\JsonService;
 use Imantalebi\Moadian\Services\JweService;
 use Imantalebi\Moadian\Services\JwsService;
 use Imantalebi\Moadian\Services\VerhoeffService;
+use Imantalebi\Moadian\Services\SimpleGuidv4Service;
 use Carbon\Carbon;
 
 class Moadian {
@@ -18,6 +19,7 @@ class Moadian {
     public $certificateBase64 = '';
     public $token = '';
     public $serverPublicKeys = [];
+    public $uid;
 
     private const CHARACTER_TO_NUMBER_CODING = [
         'A' => 65,
@@ -74,8 +76,8 @@ class Moadian {
         return $result;
     }
 
-    public function createInvoicePacket($requestTraceId, array $header, array $body, array $payments) {
-
+    public function createInvoicePacket(array $header, array $body, array $payments) {
+        $this->SimpleGuidv4Service::generate();
         $datetime = New \DateTime();
 
         if (!$this->serverPublicKeys) {
@@ -113,7 +115,7 @@ class Moadian {
         $data = [
             'payload' => JweService::create($jweHeader, $serverPublicKey, $invoiceJWS),
             'header' => [
-                'requestTraceId' => $requestTraceId,
+                'requestTraceId' => $this->uid,
                 'fiscalId' => $this->clientId,
             ],
         ];
