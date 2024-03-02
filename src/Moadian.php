@@ -77,7 +77,7 @@ class Moadian {
     }
 
     public function createInvoicePacket(array $header, array $body, array $payments) {
-        $this->SimpleGuidv4Service::generate();
+        $this->uid=SimpleGuidv4Service::generate();
         $datetime = New \DateTime();
 
         if (!$this->serverPublicKeys) {
