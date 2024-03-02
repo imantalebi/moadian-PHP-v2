@@ -1,5 +1,5 @@
 <?php
-namespace Imantalebi\MoadianPhpSdk\Services;
+namespace Imantalebi\Moadian\Services;
 
 use phpseclib3\Crypt\RSA;
 

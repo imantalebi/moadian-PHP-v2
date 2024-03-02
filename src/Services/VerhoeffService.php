@@ -1,6 +1,6 @@
 <?php
 
-namespace Imantalebi\MoadianPhpSdk\Services;
+namespace Imantalebi\Moadian\Services;
 
 class VerhoeffService
 {
