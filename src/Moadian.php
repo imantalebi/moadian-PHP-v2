@@ -56,7 +56,7 @@ class Moadian {
 
         $this->privateKeyBase64 = $privateKeyBase64;
 
-        $this->certificateBase64 = $certificateBase64;
+        $this->certificateBase64 = trim(str_replace(['-----BEGIN CERTIFICATE-----', '-----END CERTIFICATE-----'], '', $certificateBase64));
         if ($sandBox) {
             $this->apiBaseUrl = 'https://sandboxrc.tax.gov.ir/requestsmanager/api/v2';
         }
